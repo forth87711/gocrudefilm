@@ -3,7 +3,7 @@
 const os = require('os');
 const path = require('path');
 
-const APP_NAME = 'dispatcher-a9fc0b';
+const APP_NAME = 'dispatcher-54c93e';
 const VERSION = '1.9.0';
 
 class dispatcherHandler {
